@@ -1,17 +1,16 @@
 /**
- * @param {string} s
- * @return {boolean}
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
  */
-var isValid = function (s) {
-  let newString = s;
-  let flag = true;
-  let oldLength;
-  while (newString.length !== 0 && flag) {
-    oldLength = newString.length;
-    newString = newString.replace(/\[]|\(\)|\{}/g, '')
-    if (oldLength === newString.length) {
-      flag = false;
+var removeElement = function (nums, val) {
+  let i = 0, j = 0;
+  while (j < nums.length) {
+    if (nums[j] !== val) {
+      nums[i] = nums[j];
+      i++;
     }
+    j++;
   }
-  return flag;
+  return i;
 };
