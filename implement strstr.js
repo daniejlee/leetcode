@@ -1,17 +1,11 @@
 /**
- * @param {string} s
- * @return {boolean}
+ * @param {string} haystack
+ * @param {string} needle
+ * @return {number}
  */
-var isValid = function (s) {
-  let newString = s;
-  let flag = true;
-  let oldLength;
-  while (newString.length !== 0 && flag) {
-    oldLength = newString.length;
-    newString = newString.replace(/\[]|\(\)|\{}/g, '')
-    if (oldLength === newString.length) {
-      flag = false;
-    }
+var strStr = function (haystack, needle) {
+  if (needle === ""){
+    return 0;
   }
-  return flag;
+  return haystack.indexOf(needle)
 };
