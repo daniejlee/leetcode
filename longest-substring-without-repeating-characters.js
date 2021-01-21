@@ -11,7 +11,8 @@ var lengthOfLongestSubstring = function (s) {
       if(subStr.length > maxLen){
         maxLen = subStr.length;
       }
-      subStr = "";
+      // subStr = "";
+      subStr = s[i];
     }
     else{
       subStr += s[i]
