@@ -18,6 +18,9 @@ var lengthOfLongestSubstring = function (s) {
     }
     //need case if no duplicates
   }
+  if(maxLen === 0 && s.length > 0){
+    return s.length;
+  }
   return maxLen;
 };
 
