@@ -12,15 +12,15 @@ var lengthOfLongestSubstring = function (s) {
         maxLen = subStr.length;
       }
       // subStr = "";
+      i-=subStr.length-1;
       subStr = s[i];
     }
     else{
       subStr += s[i]
     }
-    //need case if no duplicates
   }
-  if(maxLen === 0 && s.length > 0){
-    return s.length;
+  if(subStr.length > maxLen && s.length > 0){
+    return subStr.length;
   }
   return maxLen;
 };
