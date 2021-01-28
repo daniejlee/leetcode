@@ -23,4 +23,12 @@ var reverseList = function (head) {
     index++;
   }
 
+  previous = current;
+  while (index-- > 0) {
+    current.next = current.prev;
+    delete current.prev;
+    current = current.next;
+  }
+  current.next = null;
+  return previous;
 };
